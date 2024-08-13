@@ -1,14 +1,14 @@
 (function ($) {
     "use strict";
-
+    $('.navbar').fadeIn('slow').css('display', 'flex');
     // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
-        }
-    });
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 0) {
+    //
+    //     } else {
+    //         $('.navbar').fadeOut('slow').css('display', 'none');
+    //     }
+    // });
 
 
     // Smooth scrolling on the navbar links
