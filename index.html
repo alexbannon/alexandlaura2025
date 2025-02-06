@@ -27,6 +27,24 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="application/javascript">
+        var loadCounter = 0;
+        var iframeLoaded = function() {
+            loadCounter += 1;
+            if (loadCounter === 2) {
+                console.log("set height")
+                $("iframe").attr("height", "1132px");
+                $(window).scrollTo(315,0)
+            } else if (loadCounter === 3) {
+                $("iframe").attr("height", "852px");
+            } else if (loadCounter === 4) {
+                $("iframe").attr("height", "200px");
+            } else if (loadCounter === 5) {
+                $("iframe").attr("height", "1132px");
+            }
+        }
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -527,7 +545,7 @@
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="position-relative text-center">
-                <h3 class="text-uppercase font-weight-normal m-0" style="letter-spacing: 2px;">RSVP Coming Soon!</h3>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNTFKrmzq8gscJo0XFNTefzuQoFg_pJr8GBM79thhivF8_IQ/viewform?embedded=true" scrolling="no" width="640" height="2204" frameborder="0" marginheight="0" marginwidth="0" onload="iframeLoaded()">Loading…</iframe>
             </div>
 
 
